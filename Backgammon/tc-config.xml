@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:tc-config xmlns:con="http://www.terracotta.org/config">
+  <servers>
+    <server host="%i" name="localhost">
+      <dso-port bind="0.0.0.0">9510</dso-port>
+      <jmx-port bind="0.0.0.0">9520</jmx-port>
+      <data>terracotta/server-data</data>
+      <logs>terracotta/server-logs</logs>
+      <statistics>terracotta/cluster-statistics</statistics>
+    </server>
+  </servers>
+  <clients>
+    <logs>terracotta/client-logs</logs>
+  </clients>
+  
+  <application>
+    <dso>
+       <instrumented-classes>
+        <include>
+            <class-expression>com.mindgames.web.GetServlet</class-expression>
+        </include>
+        <include>
+            <class-expression>com.mindgames.web.PutServlet</class-expression>
+        </include>   
+        <include>
+            <class-expression>com.mindgames.websocket.BackgammonWebSocketServlet</class-expression>
+        </include>
+        <include>
+            <class-expression>com.mindgames.websocket.Sender</class-expression>
+        </include>
+         <include>
+           <class-expression>com.mindgames.websocket.BackgammonWebSocket</class-expression>
+         </include>
+         <include>
+           <class-expression>com.mindgames.gammon.GammonModelHandler</class-expression>
+         </include>         
+         <include>
+            <class-expression>com.mindgames.websocket.Webpackage</class-expression>
+         </include>
+         <include>
+            <class-expression>com.mindgames.websocket.TestMessage</class-expression>
+         </include>
+         <include>
+           <class-expression>com.mindgames.gammon.GammonModel</class-expression>
+         </include>         
+       </instrumented-classes>
+       <locks>
+        <autolock>
+           <method-expression>void com.mindgames.gammon.GammonModel.set(..)</method-expression>
+           <lock-level>write</lock-level>
+        </autolock>
+      </locks>       
+      <roots>
+        <root>
+        	<field-name>com.mindgames.websocket.BackgammonWebSocketServlet.queues</field-name>         
+        </root>
+        <root>
+        	<field-name>com.mindgames.websocket.BackgammonWebSocketServlet.members</field-name> 
+        </root>
+        <root>
+        	<field-name>com.mindgames.gammon.GammonModelHandler.model</field-name> 
+        </root>
+      </roots>
+      <transient-fields>
+        <field-name>com.mindgames.websocket.BackgammonWebSocket.connection</field-name>
+        <field-name>com.mindgames.websocket.BackgammonWebSocket.sender</field-name>
+        <field-name>org.eclipse.jetty.websocket.WebSocketConnection._endp</field-name>
+        <field-name>org.eclipse.jetty.websocket.WebSocketConnection._generator</field-name>
+        <field-name>org.eclipse.jetty.websocket.WebSocketConnection._hixie</field-name>
+        <field-name>org.eclipse.jetty.websocket.WebSocketConnection._idle</field-name>
+        <field-name>org.eclipse.jetty.websocket.WebSocketConnection._parser</field-name>
+        <field-name>org.eclipse.jetty.io.nio.IndirectNIOBuffer._buf</field-name>
+        <field-name>org.eclipse.jetty.websocket.WebSocketParser._buffer</field-name>
+        <field-name>org.eclipse.jetty.websocket.WebSocketParser._handler</field-name>
+        <field-name>org.eclipse.jetty.io.nio.ChannelEndPoint._channel</field-name>
+        <field-name>org.eclipse.jetty.io.nio.SelectChannelEndPoint._connection</field-name>
+        <field-name>org.eclipse.jetty.io.nio.ChannelEndPoint._local</field-name>
+        <field-name>org.eclipse.jetty.io.nio.ChannelEndPoint._remote</field-name>
+        <field-name>org.eclipse.jetty.io.nio.ChannelEndPoint._socket</field-name>
+      </transient-fields>
+    </dso>
+  </application>
+</con:tc-config>

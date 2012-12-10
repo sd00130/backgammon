@@ -1,0 +1,9 @@
+<html>
+<head>
+<title>Backgammon welcome page</title>
+<link href="./css/backgammon.css" type="text/css" rel="stylesheet" shorttag="yes" />
+</head>
+<body>
+<div class="board"></div>
+</body>
+</html>

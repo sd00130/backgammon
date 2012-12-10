@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+C:\Users\k.slavnikovs\workspace-backgammon\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\236545309.index
+\Backgammon\src
+C:\Users\k.slavnikovs\workspace-backgammon\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4195777989.index
+\Backgammon\src

@@ -1,0 +1,391 @@
+body {
+
+	margin:0px;
+	padding:0px;
+	scrollbar-arrow-color: yellow;
+	scrollbar-base-color: black;
+	scrollbar-dark-shadow-color: yellow;
+	scrollbar-track-color: green;
+	scrollbar-face-color: blue;
+	scrollbar-shadow-color: white;
+	scrollbar-highlight-color: silver;
+	scrollbar-3d-light-color: black;
+}
+
+#content
+{
+	background-image:url('../img/background.png');
+	margin: 0 auto;
+	position: relative;
+	width: 950px;
+}
+
+.board
+{
+	background-image:url('../img/doska.jpg');
+	float:left;
+	background-repeat: no-repeat;
+	width: 553px;
+	z-index: 0;
+}
+
+#chat-container
+{
+	width: 310px;
+	float:left
+}
+
+#chat-field
+{
+	background-image:url('../img/chat-bg.png');
+	margin: 0 auto;
+	width: 290px;
+	height: 400px;
+	overflow: auto;
+}
+
+#chat 
+{ 
+	background-image:url('../img/background.png');
+	width: 310px;
+	height: 434px;
+	overflow: auto;
+	padding: 4px; 
+	
+}
+#input 
+{ 
+	background-image:url('../img/background.png');
+	clear: both; 
+	width: 310px; 
+	padding: 4px; 
+	border-top: 0px; 
+}
+
+.projector
+{
+	position: absolute;
+}
+
+.projector.topLine
+{
+	height:25px;
+    width:29px;
+}
+
+.projector.bottomLine
+{
+	height:22px;
+    width:34px;
+}
+
+.chip
+{
+	background-image:url('../img/chips/fish_bl.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 100;
+	height:26px;
+	width:26px;
+}
+
+.placeholder
+{
+	background: blue;
+	position: absolute;
+	height:26px;
+	width:26px;
+}
+
+.chip.on , .chip.selected 
+{
+	background-image:url('../img/chips/fish_sel.png') !important;
+	cursor:pointer;
+}
+
+
+
+
+
+.chip.top[data-vpos="0"]
+{
+	top:48px;
+	z-index:1;
+}
+
+.chip.top[data-vpos="1"]
+{
+	top:68px;
+	z-index:10;
+}
+
+.chip.top[data-vpos="2"]
+{
+	top:88px;
+	z-index:20;
+}
+
+.chip.top[data-vpos="3"]
+{
+	top:108px;
+	z-index:30;
+}
+
+
+.chip.top[data-vpos="4"]
+{
+	top:128px;
+	z-index:1;
+}
+
+.chip.top[data-vpos="5"]
+{
+	top:148px;
+	z-index:10;
+}
+
+.chip.top[data-vpos="6"]
+{
+	top:168px;
+	z-index:20;
+}
+
+.chip.top[data-vpos="7"]
+{
+	top:188px;
+	z-index:30;
+}
+
+.chip.top[data-vpos="8"]
+{
+	top:208px;
+	z-index:1;
+}
+
+.chip.top[data-vpos="9"]
+{
+	top:228px;
+	z-index:10;
+}
+
+.chip.top[data-vpos="10"]
+{
+	top:248px;
+	z-index:20;
+}
+
+.chip.top[data-vpos="11"]
+{
+	top:268px;
+	z-index:30;
+}
+
+.chip.top[data-vpos="12"]
+{
+	top:288px;
+	z-index:30;
+}
+
+
+
+
+
+
+
+
+
+
+
+.chip.bottom[data-vpos="0"]
+{
+	top:393px;
+	z-index:1;
+}
+
+.chip.bottom[data-vpos="1"]
+{
+	top:373px;
+	z-index:10;
+}
+
+.chip.bottom[data-vpos="2"]
+{
+	top:353px;
+	z-index:20;
+}
+
+.chip.bottom[data-vpos="3"]
+{
+	top:333px;
+	z-index:30;
+}
+
+
+
+
+
+
+
+[data-hpos="1"]
+{
+	left:92px
+}
+
+[data-hpos="2"]
+{
+	left:121px
+}
+
+[data-hpos="3"]
+{
+	left:148px
+}
+
+[data-hpos="4"]
+{
+	left:177px
+}
+
+[data-hpos="5"]
+{
+	left:203px
+}
+
+[data-hpos="6"]
+{
+	left:230px
+}
+
+
+
+[data-hpos="7"]
+{
+	left:295px
+}
+
+[data-hpos="8"]
+{
+	left:324px
+}
+
+[data-hpos="9"]
+{
+	left:351px
+}
+
+[data-hpos="10"]
+{
+	left:379px
+}
+
+[data-hpos="11"]
+{
+	left:405px
+}
+
+[data-hpos="12"]
+{
+	left:432px
+}
+
+
+
+
+
+[data-hpos="24"]
+{
+	left:75px
+}
+
+[data-hpos="23"]
+{
+	left:105px
+}
+
+[data-hpos="22"]
+{
+	left:135px
+}
+
+[data-hpos="21"]
+{
+	left:166px
+}
+
+[data-hpos="20"]
+{
+	left:197px
+}
+
+[data-hpos="19"]
+{
+	left:227px
+}
+
+
+
+[data-hpos="18"]
+{
+	left:298px
+}
+
+[data-hpos="17"]
+{
+	left:329px
+}
+
+[data-hpos="16"]
+{
+	left:360px
+}
+
+[data-hpos="15"]
+{
+	left:390px
+}
+
+[data-hpos="14"]
+{
+	left:420px
+}
+
+[data-hpos="13"]
+{
+	left:450px
+}
+
+
+
+#u1{left:92px; top:37px;}
+#u2{left:121px; top:37px;}
+#u3{left:148px; top:37px;}
+#u4{left:175px; top:37px;}
+#u5{left:203px; top:37px;}
+#u6{left:231px; top:37px;}
+#u7{left:293px; top:37px;}
+#u8{left:321px; top:37px;}
+#u9{left:349px; top:37px;}
+#u10{left:376px; top:37px;}
+#u11{left:403px; top:37px;}
+#u12{left:432px; top:37px;}
+
+#u24{left:69px; top:404px;}
+#u23{left:103px; top:404px;}
+#u22{left:133px; top:404px;}
+#u21{left:165px; top:404px;}
+#u20{left:195px; top:404px;}
+#u19{left:225px; top:404px;}
+#u18{left:295px; top:404px;}
+#u17{left:326px; top:404px;}
+#u16{left:357px; top:404px;}
+#u15{left:387px; top:404px;}
+#u14{left:418px; top:404px;}
+#u13{left:449px; top:404px;}
+
+
+
+#phrase { width:14em; background-color: #e0f0f0; position: relative;}
+#username { width:14em; background-color: #e0f0f0; position: relative;}
+.hidden { display: none; position: relative;}
+.from { font-weight: bold; position: relative;}
+.alert { font-style: italic; position: relative;}

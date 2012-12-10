@@ -1,0 +1,8 @@
+INDEX VERSION 1.122+C:\Users\k.slavnikovs\workspace-backgammon\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1865297591.index
+1034243697.index
+236545309.index
+2818946517.index
+4195777989.index
+16320587.index
+4023089008.index
