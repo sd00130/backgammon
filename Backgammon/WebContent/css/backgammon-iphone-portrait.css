@@ -25,10 +25,10 @@ body {
 	background-image:url('../img/doska.jpg'); 
 	float:left;
 	position: relative;
-	background-size:1024px 768px;
+	background-size: 320px 270px;
 	background-repeat: no-repeat;
-	width: 1024px;
-	height: 768px;
+	width: 320px;
+	height: 270px;
 	z-index: 0;
 }
 

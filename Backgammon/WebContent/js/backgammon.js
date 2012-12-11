@@ -144,6 +144,37 @@ MINDGAMES.pages = {
 		
 	backgammon : function() {
 	
+		$("#chat-enable").click(function()
+		{
+			$("#chat-enable").addClass("hidden");
+	        $("#chat-disable").removeClass("hidden");
+	        
+	        $("#join").removeClass("chat-hidden");
+			$("#joined").removeClass("chat-hidden");
+			
+			$( "#chat-field" ).animate( { width: "290px", height: "270px" }, 100);
+			$( "#chat" ).animate( { width: "290px", height: "270px" }, 100);
+			$( "#input-field" ).animate( { width: "290px", height: "40px" }, 100);
+			$( "#input" ).animate( { width: "290px" }, 100);
+	        
+		});
+		
+		$("#chat-disable").click(function()
+		{
+			$("#chat-disable").addClass("hidden");
+			$("#chat-enable").removeClass("hidden");
+			
+			$("#join").addClass("chat-hidden");
+			$("#joined").addClass("chat-hidden");
+			 
+			$( "#chat-field" ).animate( { width: "0px", height: "0px" }, 100);
+			$( "#chat" ).animate( { width: "0px", height: "0px" }, 100);
+			$( "#input-field" ).animate( { width: "0px", height: "0px" }, 100);
+			$( "#input" ).animate( { width: "0px", height: "0px" }, 100);
+			
+			
+		});
+		
 		$("#joinB").click(function()
 		{
 			MINDGAMES.websockets.createWebsocket($("#username").val());

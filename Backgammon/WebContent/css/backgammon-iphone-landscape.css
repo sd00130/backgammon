@@ -25,17 +25,50 @@ body {
 	background-image:url('../img/doska.jpg'); 
 	float:left;
 	position: relative;
-	background-size:1024px 768px;
+	background-size: 480px 320px;
 	background-repeat: no-repeat;
-	width: 1024px;
-	height: 768px;
+	width: 480px;
+	height: 320px;
 	z-index: 0;
+}
+
+#chat-enable
+{
+	background-image:url('../img/chat-bg.png');
+	width: 20px;
+	height: 20px;
+	position: fixed;	
+	padding: 4px;
+	-webkit-border-radius: 5px;
+ 	-moz-border-radius: 5px;
+ 	-o-border-radius: 5px;
+ 	-ms-border-radius: 5px;
+ 	-khtml-border-radius: 5px;
+ 	border-radius: 5px;
+ 	z-index: 1;
+}
+
+#chat-disable
+{
+	background-image:url('../img/chat-bg.png');
+	width: 20px;
+	height: 20px;
+	position: fixed;	
+	padding: 4px;
+	-webkit-border-radius: 5px;
+ 	-moz-border-radius: 5px;
+ 	-o-border-radius: 5px;
+ 	-ms-border-radius: 5px;
+ 	-khtml-border-radius: 5px;
+ 	border-radius: 5px;
+ 	z-index: 1;
 }
 
 #chat-container
 {
-	width: 310px;
-	float:left;
+	width: 290px;
+	position: fixed;
+	padding: 4px;
 }
 
 #input-field
@@ -44,13 +77,13 @@ body {
 	margin: 0 auto;
 	width: 290px;
 	height: 40px;
-	padding: 5px 5px 0px;
-	-webkit-border-radius: 10px;
- 	-moz-border-radius: 10px;
- 	-o-border-radius: 10px;
- 	-ms-border-radius: 10px;
- 	-khtml-border-radius: 10px;
- 	border-radius: 10px;
+	float:left;
+	-webkit-border-radius: 0px 0px 10px 10px;
+ 	-moz-border-radius: 0px 0px 10px 10px;
+ 	-o-border-radius: 0px 0px 10px 10px;
+ 	-ms-border-radius: 0px 0px 10px 10px;
+ 	-khtml-border-radius: 0px 0px 10px 10px;
+ 	border-radius: 0px 0px 10px 10px;
 }
 
 #chat-field
@@ -58,32 +91,30 @@ body {
 	background-image:url('../img/chat-bg.png');
 	margin: 0 auto;
 	width: 290px;
-	height: 400px;
+	height: 270px;
 	overflow: auto;
-	padding: 5px 5px 0px;
-	-webkit-border-radius: 10px;
- 	-moz-border-radius: 10px;
- 	-o-border-radius: 10px;
- 	-ms-border-radius: 10px;
- 	-khtml-border-radius: 10px;
- 	border-radius: 10px;
+	float:left;
+	-webkit-border-radius: 10px 10px 0px 0px;
+ 	-moz-border-radius: 10px 10px 0px 0px;
+ 	-o-border-radius: 10px 10px 0px 0px;
+ 	-ms-border-radius: 10px 10px 0px 0px;
+ 	-khtml-border-radius: 10px 10px 0px 0px;
+ 	border-radius: 10px 10px 0px 0px;
 }
 
 #chat 
 { 
-	background-image:url('../img/background.png');
-	width: 310px;
-	height: 420px;
+	width: 290px;
+	height: 270px;
+	float:left;
 	overflow: auto;
-	padding: 4px; 
 	
 }
 #input 
 { 
-	background-image:url('../img/background.png');
 	clear: both; 
-	width: 310px; 
-	padding: 4px; 
+	width: 290px; 
+	float:left; 
 	border-top: 0px; 
 }
 
@@ -429,7 +460,7 @@ body {
 
 
 
-
+.chat-hidden { display: none; }
 
 .hidden { display: none; position: relative;}
 .from { font-weight: bold; position: relative;}

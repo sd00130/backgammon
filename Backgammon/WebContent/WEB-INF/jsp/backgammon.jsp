@@ -4,11 +4,20 @@
 	<head>
 		
 		<title>Backgammon</title>
+		<link href="./css/backgammon-iphone-portrait.css"
+			  media="(max-width : 319px)"
+			  rel="stylesheet" />
+		<link href="./css/backgammon-iphone-landscape.css"
+			  media="(max-width : 479px) and (min-width : 320px)"
+			  rel="stylesheet" />
+		<link href="./css/backgammon-ipad-portrait.css"
+			  media="(max-width : 767px) and (min-width : 480px)"
+			  rel="stylesheet" />
 		<link href="./css/backgammon-ipad-landscape.css"
-			  media="screen and (max-width : 1024px)"
+			  media="(max-width : 1023px) and (min-width : 768px)"
 			  rel="stylesheet" />
 		<link href="./css/backgammon.css"
-			  media="screen and (min-width : 1024px)"
+			  media="(min-width : 1024px)"
 			  rel="stylesheet" />
 	</head>
 	<body>
@@ -52,6 +61,12 @@
 			</c:forEach>
 		</div>
 		<div id="chat-container">
+			<div id="chat-enable" class="hidden">
+				>>
+			</div>
+			<div id="chat-disable">
+				<<
+			</div>
 			<div id="chat">
 				<div id ="chat-field">
 				</div>
@@ -59,11 +74,14 @@
 			<div id="input">
 				<div id="input-field">
 	  				<div id="join" >
-	    				Username:&nbsp;<input id="username" type="text"/><input id="joinB" class="button" type="submit" name="join" value="Join"/>
+	    				Username:&nbsp;
+	    				<input id="username" type="text"/>
+	    				<input id="joinB" class="button" type="submit" name="join" value="Join"/>
 	  				</div>
 	  				<div id="joined" class="hidden">
-	    				Chat:&nbsp;<input id="phrase" type="text"/>
-	     					  	 <input id="sendB" class="button" type="submit" name="join" value="Send"/>
+	    				Chat:&nbsp;
+	    				<input id="phrase" type="text"/>
+	     			    <input id="sendB" class="button" type="submit" name="join" value="Send"/>
 	  				</div>
 				</div>
 			</div>

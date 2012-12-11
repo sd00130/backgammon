@@ -1,5 +1,9 @@
-body {
+html{
+	margin:0 !important;
+	padding:0 !important; 
+}
 
+body {
 	margin:90px 0px; 
 	padding:0px;
 	scrollbar-arrow-color: yellow;
@@ -33,9 +37,21 @@ body {
 	background-image:url('../img/doska.jpg');
 	float:left;
 	position: relative;
+	background-size: 553px 476px;
 	background-repeat: no-repeat;
 	width: 553px;
+	height: 476px;
 	z-index: 0;
+}
+
+#chat-enable
+{
+	display: none;
+}
+
+#chat-disable
+{
+	display: none;
 }
 
 #chat-container
